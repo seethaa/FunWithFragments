@@ -43,7 +43,6 @@ class MainFragment : Fragment(), View.OnClickListener {
 
         if (context is OnButtonClickedListener) {
             //Parent activity will automatically subscribe to callback
-
             callback = context
         } else {
             throw ClassCastException(context.toString() + " must implement OnButtonClickedListener.")
