@@ -10,11 +10,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_main.*
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 /**
  * A simple [Fragment] subclass.
  *
@@ -35,7 +30,11 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fragment_main_button.setOnClickListener(this)
+
+        // Set onClickListener to buttons
+        fragment_main_button_toshi.setOnClickListener(this)
+        fragment_main_button_snowflake.setOnClickListener(this)
+        fragment_main_button_scooby.setOnClickListener(this)
     }
 
     override fun onAttach(context: Context?) {

@@ -1,15 +1,28 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@android:color/holo_orange_light">
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/fragment_main_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/fragment_main_button_toshi"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Details"
-        android:textSize="30sp"/>
+        android:tag="10"
+        android:text="Toshi" />
+
+    <Button
+        android:id="@+id/fragment_main_button_snowflake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="20"
+        android:text="Snowflake" />
+
+    <Button
+        android:id="@+id/fragment_main_button_scooby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="30"
+        android:text="Scooby" />
 
 </LinearLayout>

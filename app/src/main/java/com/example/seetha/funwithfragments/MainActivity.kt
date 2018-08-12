@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.content.Intent
 import android.widget.FrameLayout
+import com.example.seetha.funwithfragments.DetailActivity.Companion.EXTRA_BUTTON_TAG
+import kotlinx.android.synthetic.main.fragment_detail.*
 
 class MainActivity : AppCompatActivity(), MainFragment.OnButtonClickedListener {
 
@@ -12,18 +14,21 @@ class MainActivity : AppCompatActivity(), MainFragment.OnButtonClickedListener {
 
     override fun onButtonClicked(view: View) {
 
-        if (detailFragment == null) {
-            startActivity(Intent(this, DetailActivity::class.java))
-        }
-
+        val buttonTag = Integer.parseInt(view.tag.toString())
         detailFragment?.let {
 
-            if (!it.isVisible) {
-                startActivity(Intent(this, DetailActivity::class.java))
+            if (it.isVisible) {
+                it.updateTextView(buttonTag)
             }
-        }
+        } ?: goToDetailActivity(buttonTag)
+
     }
 
+    private fun goToDetailActivity(buttonTag: Int) {
+        val i = Intent(this, DetailActivity::class.java)
+        i.putExtra(EXTRA_BUTTON_TAG, buttonTag)
+        startActivity(i)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

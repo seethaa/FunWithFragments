@@ -1,9 +1,16 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
     android:gravity="center"
-    android:background="@android:color/holo_blue_light">
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/toshi" />
 
     <TextView
         android:id="@+id/textView"
@@ -11,7 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:textSize="30sp"
-        android:text="Here are some details about what you just clicked." />
+        android:text="Here are some details about what you just clicked."
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
 </LinearLayout>
